@@ -9,6 +9,8 @@ namespace CompilationErrors
 
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             var result = SomeFunction(DateTime.Now);
 
             Console.WriteLine(result);

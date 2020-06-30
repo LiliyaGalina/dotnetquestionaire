@@ -7,14 +7,12 @@ namespace PassingArguments
     {
         static void Main(string[] args)
         {
-
             var pointAClass = new PointAsClass(2, 2);
             var pointBStruct = new PointAsStruct(2, 2);
 
             ChangeClassPointSomehow(pointAClass);
             ChangeStructPointSomehow(pointBStruct);
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
+           
             Console.WriteLine($"PointAsClass-> x:{pointAClass.X}, y:{pointAClass.Y}");
             Console.WriteLine($"PointAsStruct-> x:{pointBStruct.X}, y:{pointBStruct.Y}");
             Console.ResetColor();
@@ -36,14 +34,8 @@ namespace PassingArguments
 
     }
 
-    interface IPoint
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-    }
 
-
-    class PointAsClass : IPoint
+    class PointAsClass 
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -55,7 +47,7 @@ namespace PassingArguments
         }
     }
 
-    struct PointAsStruct : IPoint
+    struct PointAsStruct 
     {
         public int X { get; set; }
         public int Y { get; set; }
